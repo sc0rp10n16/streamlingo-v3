@@ -53,12 +53,12 @@ export const WavyBackground = ({
     ctx = canvas.getContext("2d");
     w = ctx.canvas.width = window.innerWidth;
     h = ctx.canvas.height = window.innerHeight;
-    ctx.filter = `blur(${blur}px)`;
+    // ctx.filter = `blur(${blur}px)`;
     nt = 0;
     window.onresize = function () {
       w = ctx.canvas.width = window.innerWidth;
       h = ctx.canvas.height = window.innerHeight;
-      ctx.filter = `blur(${blur}px)`;
+      // ctx.filter = `blur(${blur}px)`;
     };
     render();
   };
@@ -122,9 +122,7 @@ export const WavyBackground = ({
         className="absolute inset-0 z-0 h-full w-full"
         ref={canvasRef}
         id="canvas"
-        style={{
-          ...(isSafari ? { filter: `blur(${blur}px)` } : {}),
-        }}
+        
       ></canvas>
       <div className={cn("relative z-10 p-4 sm:p-8 md:p-12 lg:p-16", className)} {...props}>
         {children}
