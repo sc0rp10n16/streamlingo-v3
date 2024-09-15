@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -14,29 +13,29 @@ const MobileNav = () => {
   const links = [
     {
       title: 'Home',
-      icon: (<IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />),
+      icon: (<IconHome className="h-full w-full text-white dark:text-neutral-300" />),
       href: '/'
     },
     {
       title: 'Upcoming Meetings',
-      icon: (<IconCalendarStats className="h-full w-full text-neutral-500 dark:text-neutral-300" />),
+      icon: (<IconCalendarStats className="h-full w-full text-white dark:text-neutral-300" />),
       href:'/upcoming-meetings'
     },
     {
       title: 'Meetings History',
-      icon: (<IconHistory className="h-full w-full text-neutral-500 dark:text-neutral-300" />),
-      href:'/upcoming-meetings'
+      icon: (<IconHistory className="h-full w-full text-white dark:text-neutral-300" />),
+      href:'/meetings-history'
     },
     {
       title: 'Profile',
-      icon: (<IconUserCircle className="h-full w-full text-neutral-500 dark:text-neutral-300" />),
+      icon: (<IconUserCircle className="h-full w-full text-white dark:text-neutral-300" />),
       href: '/profile'
     }
     
   ]
 
   return (
-    <section className="w-full max-w-[264px] text-white fixed left-3 bottom-3">
+    <section className="w-full max-w-[264px] text-white fixed top-3 left-3">
       <Sheet>
         <SheetTrigger asChild>
           <IconMenu2 className='h-10 w-10 text-neutral-500 dark:text-neutral-300'/>
@@ -58,14 +57,14 @@ const MobileNav = () => {
                         href={item.href}
                         key={item.title}
                         className={cn(
-                          'flex gap-4 items-center p-4 rounded-lg w-full max-w-60',
+                          'flex gap-4 cursor-pointer items-center p-4 rounded-lg w-full max-w-60',
                           {
                             'bg-blue-1': isActive,
                           }
                         )}
                       >
-                        <div className="h-4 w-4">{item.icon}</div>
-                        <p className="font-semibold">{item.title}</p>
+                        <div className="h-4 w-4 text-white">{item.icon}</div>
+                        <p className="font-normal">{item.title}</p>
                       </Link>
                     </SheetClose>
                   );
