@@ -29,7 +29,7 @@ export function AnimatedPin({ className, icon, title, description, handleClick }
         <div className="isolate aspect-square items-center justify-center bg-white/20 shadow-lg ring-1 ring-black/5 flex glassmorphism size-12 rounded-[10px]">
         {icon}
       </div>
-      <div className="flex flex-col gap-2 mt-5">
+      <div className="flex flex-col gap-2 mt-5 mr-5">
         <h1 className="text-2xl font-bold text-center">{title}</h1>
         <p className="text-lg font-normal text-center">{description}</p>
       </div>
