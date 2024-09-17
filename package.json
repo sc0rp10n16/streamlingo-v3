@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-slot": "^1.1.0",
     "@tabler/icons-react": "^3.16.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -21,7 +22,8 @@
     "react-dom": "^18",
     "simplex-noise": "^4.0.3",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "vaul": "^0.9.3"
   },
   "devDependencies": {
     "@types/node": "^20",

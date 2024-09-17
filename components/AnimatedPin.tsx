@@ -13,7 +13,7 @@ interface HomeCardProps {
 
 export function AnimatedPin({ className, icon, title, description, handleClick }: HomeCardProps) {
   return (
-    <div className="w-full flex items-center justify-center mx-10"
+    <div className="px-4 py-6 flex flex-col justify-between w-full xl:max-w-[270px] min-h-[260px] rounded-[14px] cursor-pointer"
       onClick={handleClick}
     >
       <PinContainer

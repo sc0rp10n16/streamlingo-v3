@@ -33,19 +33,26 @@ export default function Home() {
     
   ]
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[20px_1fr_20px] overflow-hidden items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex w-full flex-col gap-8 row-start-2 items-center justify-center">
-      <WavyBackground backgroundFill="bg-slate-900" className="max-w-4xl mx-auto pb-40 text-center">
+      <WavyBackground backgroundFill="bg-slate-900" className="max-w-4xl pb-40 items-center justify-center text-center">
+        <div className="mb-10 items-center justify-center">
+
         <Hero />
+        </div>
+        <div className="mt-10 items-center justify-center mx-auto">
+
         <MeetingTypeList />
-        <div className="lg:hidden">
+        </div>
+        <div className="lg:hidden z-50">
           <MobileNav/>
         </div>
-        <div className="lg:flex items-center justify-center w-full hidden">
+        <div className="lg:flex items-center justify-center w-full hidden z-50">
           <FloatingDock
             desktopClassName="fixed bottom-3"
             mobileClassName="translate-y-20 fixed left-3"
             items={links}
+            
           />
         </div>
       </WavyBackground>
