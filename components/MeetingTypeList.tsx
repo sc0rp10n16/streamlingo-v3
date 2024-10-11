@@ -42,11 +42,11 @@ const MeetingTypeList = () => {
       />
       {meetingState==='isInstantMeeting' ? (
         <Drawer open={meetingState==='isInstantMeeting'}>
-          <DrawerTrigger>Open</DrawerTrigger>
+          <DrawerTrigger></DrawerTrigger>
           <DrawerContent>
             <DrawerHeader className="flex flex-col items-center justify-center">
               <DrawerTitle className="text-center">Start An Instant Meeting</DrawerTitle>
-              <Button className="w-32 text-center items-center justify-center">Start Meeting</Button>
+              <a href="https://streamlingo-ui.vercel.app/"><Button  className="w-32 text-center items-center justify-center">Start Meeting</Button></a>
               <DrawerClose onClick={()=> setMeetingState(undefined)}>
                 <Button variant="default">Cancel</Button>
               </DrawerClose>
@@ -59,7 +59,7 @@ const MeetingTypeList = () => {
       )}
       {meetingState==='isJoiningMeeting' ? (
         <Drawer open={meetingState==='isJoiningMeeting'}>
-          <DrawerTrigger>Open</DrawerTrigger>
+          <DrawerTrigger></DrawerTrigger>
           <DrawerContent>
             <DrawerHeader className="flex flex-col items-center justify-center">
               <DrawerTitle className="text-center">Start An Instant Meeting</DrawerTitle>
@@ -76,7 +76,7 @@ const MeetingTypeList = () => {
       )}
       {meetingState==='isScheduleMeeting' ? (
         <Drawer open={meetingState==='isScheduleMeeting'}>
-          <DrawerTrigger>Open</DrawerTrigger>
+          <DrawerTrigger></DrawerTrigger>
           <DrawerContent>
             <DrawerHeader className="flex flex-col items-center justify-center">
               <DrawerTitle className="text-center">Start An Instant Meeting</DrawerTitle>
