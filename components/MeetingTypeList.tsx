@@ -46,7 +46,7 @@ const MeetingTypeList = () => {
           <DrawerContent>
             <DrawerHeader className="flex flex-col items-center justify-center">
               <DrawerTitle className="text-center">Start An Instant Meeting</DrawerTitle>
-              <a href="https://streamlingo-ui.vercel.app/"><Button  className="w-32 text-center items-center justify-center">Start Meeting</Button></a>
+              <a href="https://stream-lingov2.vercel.app/"><Button  className="w-32 text-center items-center justify-center">Start Meeting</Button></a>
               <DrawerClose onClick={()=> setMeetingState(undefined)}>
                 <Button variant="default">Cancel</Button>
               </DrawerClose>

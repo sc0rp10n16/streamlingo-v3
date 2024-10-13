@@ -67,3 +67,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+.homepage-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container {
+  font-size: 24px;
+  display: block;
+  padding: 10px 20px;
+  margin: 10px;
+}

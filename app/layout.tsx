@@ -2,6 +2,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ClerkProvider} from '@clerk/nextjs'
+import { SocketProvider } from "@/providers/SocketProvider";
+
 
 
 const geistSans = localFont({
@@ -31,7 +34,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
       >
-        {children}
+          <SocketProvider>
+            {children}
+          </SocketProvider>
+          
+          
         
       </body>
     </html>
