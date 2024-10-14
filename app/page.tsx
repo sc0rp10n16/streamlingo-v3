@@ -4,6 +4,8 @@ import MeetingTypeList from "@/components/MeetingTypeList";
 import MobileNav from "@/components/MobileNav";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { WavyBackground } from "@/components/ui/wavy-background";
+import { SignedIn, UserButton } from "@clerk/nextjs";
+import { User } from "@clerk/nextjs/server";
 import { IconCalendarStats, IconHistory, IconHome, IconUserCircle } from "@tabler/icons-react";
 
 
@@ -27,7 +29,12 @@ export default function Home() {
     },
     {
       title: 'Profile',
-      icon: (<IconUserCircle className="h-full w-full text-neutral-500 dark:text-neutral-300" />),
+      icon: (
+              <SignedIn>
+                <UserButton/>
+              </SignedIn>
+                
+            ),
       href: '/profile'
     }
     
